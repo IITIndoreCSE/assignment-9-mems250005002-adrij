@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Define the Item structure
+// Define a structure named 'Item'
 struct Item {
     int id;
     float cost;
@@ -10,20 +10,20 @@ struct Item {
 int main() {
     // Declare an array of 6 Item structures
     Item items[6] = {
-        {1, 45.50},  // Initialize first item
-        {2, 60.75},  // Initialize second item
-        {3, 30.99},  // Initialize third item
-        {4, 80.00},  // Initialize fourth item
-        {5, 52.30},  // Initialize fifth item (not used in the loop)
-        {6, 47.90}   // Initialize sixth item (not used in the loop)
+        {101, 45.50},
+        {102, 78.90},
+        {103, 30.00},
+        {104, 120.75},
+        // Remaining 2 items (uninitialized — default values)
     };
 
-    // Iterate through the entire array
-    for (int i = 0; i < 6; ++i) {
-        // Check if the cost of the item is greater than 50.00
+    cout << "Items with cost greater than 50.00:\n";
+
+    // Iterate through all 6 elements
+    for (int i = 0; i < 6; i++) {
         if (items[i].cost > 50.00) {
-            // Display the item details
-            cout << "Item ID: " << items[i].id << ", Cost: " << items[i].cost << endl;
+            cout << "Item ID: " << items[i].id 
+                 << ", Cost: " << items[i].cost << endl;
         }
     }
 
